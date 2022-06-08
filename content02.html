@@ -1,0 +1,50 @@
+<!--
+Title: 실전 게임만들기 (강사코드)
+
+[내가 작성한 방식과 다른 점]
+1. js의 모든 기능을 함수로 작성하여 반복사용할 수 있도록 함
+
+[기타]
+1. 게임시작과 동시에 음악을 재생하고 싶은 경우, html autoplay대신 javascipt를 사용하여 게임시작 시 음악이 재생되도록 설정할 수 있음
+
+[해결못한 것]
+1. .js파일에서 fa or fas 클래스를 찾지못함 (fa-solid로 입력하면 .js파일에서는 클래스는 찾으나 아이콘이 출력되지 않음)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Game</title>
+    <link rel="stylesheet" href="content02.css">
+    <script src='content02.js' defer></script>
+    <script src="https://kit.fontawesome.com/4ddf4c1ebf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="game">
+        <header class="game__header">
+            <button class="game__button">
+                <i class="fas fa-play"></i>
+            </button>
+            <span class="game__timer">0:0</span>
+            <span class="game__score">9</span>
+        </header>
+        <section class="game__field"></section>
+    </section>
+    <section class="pop-up pop-up--hide">
+        <!--pop-up / pop-up--hide두 개의 클래스명 지정(pop-up--hide에 hidden값을 적용하기 위함) -->
+        <button class="pop-up__refresh">
+            <i class="fa fa-redo"></i>
+            <!--fa-solid fa~ 에서 solid,brand등을 제외해 주어야 아이콘이 정상출력됨-->
+        </button>
+        <span class="pop-up__message">Hello</span>
+    </section>
+    <!--section: <article> <div>와 동일하게 block속성을 가진 태그(기능상 차이는 없다)-->
+    <!--header: semantic element로 브라우저와 개발자 모두에게 자신이 사용된 의미를 명확히 전달해준다. header는 도입무에 해당하는 콘텐츠를 가지고 있는 부분을 의미한다-->
+</body>
+
+</html>
